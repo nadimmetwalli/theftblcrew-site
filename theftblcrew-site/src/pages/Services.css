@@ -1,0 +1,26 @@
+.services-page {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.services-page h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.services-page h2 {
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.services-page ul {
+  padding-left: 1.5rem;
+}
+
+.services-page li {
+  margin-bottom: 0.5rem;
+}
