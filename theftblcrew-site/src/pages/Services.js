@@ -41,7 +41,7 @@ function Services() {
   };
 
   return (
-    <div>
+    <div className='container'>
       <h1>Our Services</h1>
 
       <h2>What We Offer</h2>
