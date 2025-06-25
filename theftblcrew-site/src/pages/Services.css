@@ -34,6 +34,17 @@
     margin-top: 2rem;
 }
 
+button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  font-weight: bold;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
 .card {
     background-color: #f9f9f9;
     border: 1px solid #ddd;
@@ -114,5 +125,19 @@
     z-index: 1000;
 }
 
+@media (max-width: 768px) {
+  .card {
+    width: 90%;
+  }
 
+  nav {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  h1, h2 {
+    font-size: 1.4rem;
+  }
+}
 

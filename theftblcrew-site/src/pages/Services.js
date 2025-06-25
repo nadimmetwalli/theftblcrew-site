@@ -1,9 +1,44 @@
 import { Link } from 'react-router-dom';
 import './Services.css';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 function Services() {
   const [selectedPackage, setSelectedPackage] = useState(null);
+  const navigate = useNavigate();
+
+  const packageDetails = {
+    "Story": {
+      description: "One Instagram story. Great for quick promotions.",
+      price: "€15"
+    },
+
+    "Reel": {
+      description: "One engaging Instagram Reel. Reach a wider audience.",
+      price: "€30"
+    },
+
+    "Post": {
+      description: "One permanent Instagram Post. Great for visibility.",
+      price: "€45"
+    },
+
+    "Starter Package": {
+      description: "Includes 1 Post or Reel + 1 Story.",
+      price: "70"
+    },
+
+    "Growth Package": {
+      description: "3 Posts or Reels scheduled over one week.",
+      price: "€90"
+    },
+
+    "Custom Package": {
+      description: "Tailored collaboration based on your needs.",
+      price: "Contact us for pricing"
+    },
+  };
 
   return (
     <div>
@@ -91,11 +126,18 @@ function Services() {
         </div>
       </div>
 
-      {selectedPackage && (
+      {selectedPackage && packageDetails[selectedPackage] &&  (
         <div className="modal-overlay">
           <div className="modal">
             <h2>{selectedPackage}</h2>
-            <p>More details about this package go here.</p>
+            <p>{packageDetails[selectedPackage].description}</p>
+            <p><strong>{packageDetails[selectedPackage].price}</strong></p>
+            {selectedPackage === "Custom Package" ? (
+                <button onClick={() => navigate("/contact")}>Contact Us</button>
+            ) : (
+              <button onClick={() => alert(`You selected: ${selectedPackage}`)}>Get this package</button>
+            )}
+            <br /><br />
             <button onClick={() => setSelectedPackage(null)}>Close</button>
           </div>
         </div>
