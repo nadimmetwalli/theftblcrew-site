@@ -22,3 +22,12 @@
   height: 350px;
   margin: 0 auto;
 }
+
+.stats-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 40px;
+  justify-content: center;
+}
+

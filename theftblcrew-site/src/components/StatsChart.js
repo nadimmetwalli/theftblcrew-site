@@ -22,6 +22,34 @@ ChartJS.register(
   Legend
 );
 
+const stats = [
+  {
+    iconClass: "fab fa-instagram",
+    value: "77.6K",
+    label: "Followers",
+  },
+  {
+    iconClass: "fas fa-play",
+    value: "330K",
+    label: "Avg Daily Views",
+  },
+  {
+    iconClass: "fas fa-calendar-alt",
+    value: "10M",
+    label: "Avg Monthly Views",
+  },
+  {
+    iconClass: "fas fa-globe",
+    value: ["1. UK", "2. USA", "3. India"],
+    label: "Demographics",
+  },
+  {
+    iconClass: "fas fa-user-friends",
+    value: "18-34",
+    label: "Top Age Range",
+  },
+];
+
 
 const chartData = {
   labels: ["Feb 5", "Feb 6", "Feb 7", "Feb 8", "Feb 9", "Feb 10"],
@@ -83,6 +111,17 @@ function StatsChart() {
       <div className="stats-chart-container">
         <Bar data={chartData} options={chartOptions} />
       </div>
+
+      <div className="stats-cards-container">
+  {stats.map((stat, idx) => (
+    <StatCard
+      key={idx}
+      iconClass={stat.iconClass}
+      value={stat.value}
+      label={stat.label}
+    />
+  ))}
+</div>
     </div>
   );
 }

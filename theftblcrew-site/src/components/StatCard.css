@@ -30,3 +30,15 @@
   font-size: 14px;
   color: #aaa;
 }
+
+.stat-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px;
+}
+
+.stat-list li {
+  font-size: 14px;
+  color: #ddd;
+  line-height: 1.5;
+}

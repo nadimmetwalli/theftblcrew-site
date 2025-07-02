@@ -1,23 +1,26 @@
 import React from 'react';
-import { Bar } from 'react-chartjs-2';
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend
-} from 'chart.js';
-import './StatsChart.css';
-import StatCard from './StatCard';
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import './StatCard.css';
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend
-);
+function StatCard({ iconClass, value, label }) {
+  return (
+    <div className="stat-card">
+      <div className="stat-icon">
+        <i className={iconClass}></i>
+      </div>
+      <div className="stat-info">
+  {Array.isArray(value) ? (
+    <ul className="stat-list">
+      {value.map((item, i) => (
+        <li key={i}>{item}</li>
+      ))}
+    </ul>
+  ) : (
+    <h3>{value}</h3>
+  )}
+  <p>{label}</p>
+</div>
+    </div>
+  );
+}
+
+export default StatCard;
