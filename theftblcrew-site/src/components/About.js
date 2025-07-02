@@ -23,6 +23,9 @@ function About() {
         ref={sectionRef} 
         className={`about ${visible ? 'visible' : ''}`}
         >
+
+    <div className='about-instagram-section'>
+        <div className='about-half'>
             <div className='about-image'>
                 <img src={theftblcrewlogo} alt='logo picture'/>
             </div>
@@ -36,6 +39,15 @@ function About() {
                     is mainly Gen Z and Millennials who love fast, fun, and creative content.
                 </p>
             </div>
+        </div>
+
+        <div className="instagram-half">
+            <div
+                className="elfsight-app-e8399e87-9342-4341-a246-e1c6a8751f5f"
+                data-elfsight-app-lazy
+            ></div>
+        </div>
+    </div>
 
 
         </section>
