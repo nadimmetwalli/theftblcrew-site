@@ -1,6 +1,7 @@
 import Hero from "../components/Hero";
 import About from "../components/About"
 import StatsChart from '../components/StatsChart';
+import BrandsSlider from "../components/BrandsSlider";
 
 function Home() {
     return(
@@ -8,6 +9,7 @@ function Home() {
             <Hero />
             <About />
             <StatsChart />
+            <BrandsSlider />
         </div>
     );
 }
