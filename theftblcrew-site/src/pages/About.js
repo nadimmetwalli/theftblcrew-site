@@ -3,7 +3,11 @@ import './About.css';
 function About() {
   return (
     <div className="about-page">
-      <h1>About theftblcrew</h1>
+      
+      <div className='aboutBox'>
+        <h1>About theftblcrew</h1>
+      </div>
+      
 
       <h2>What is theftblcrew</h2>
       <p>@theftblcrew is a football-focused Instagram page that delivers entertaining, engaging content for fans around the world.</p>
