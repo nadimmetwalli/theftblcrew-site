@@ -9,28 +9,52 @@
 
 .aboutBox {
     background-color: #192841;
-    padding: 130px 40px;
+    padding: 60px;
     border-radius: 1rem;
+    position: relative;
+}
+
+.about-flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.left-side {
+    flex: 1 1 50%;
+}
+
+.right-side {
+    flex: 1 1 40%;
+}
+
+.right-side img {
+  position: absolute;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  top: 60%;
+  right: 60px;
+  transform: translateY(-50%);
+  width: 20%;
 }
 
 .aboutBox h1 {
     font-family: "Bebas Neue", sans-serif;
     color: white;
     font-weight: 100;
-}
-
-.about-page h1 {
     font-size: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 
-.about-page h2 {
-    margin-top: 1.5rem;
-    font-size: 1.3rem;
-    color: #444;
+.aboutBox p {
+    color: white;
+    font-size: 1rem;
 }
 
-.about-page p {
-  font-size: 1rem;
-  color: #222;
+.right-side img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    object-fit: cover;
 }

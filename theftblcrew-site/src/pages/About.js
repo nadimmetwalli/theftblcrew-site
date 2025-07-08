@@ -1,16 +1,30 @@
 import './About.css';
+import yamalPhoto from '../assets/yamal.png';
 
 function About() {
   return (
     <div className="about-page">
       
       <div className='aboutBox'>
-        <h1>About theftblcrew</h1>
+        <div className='about-flex-container'>
+          
+          <div className='left-side'>
+            <h1 className='main-title'>About theftblcrew</h1>
+            <p>@theftblcrew is a football-focused Instagram page that delivers entertaining, engaging content for fans around the world.</p>
+          </div>
+          
+          <div className='right-side'>
+            <img src={yamalPhoto} alt='Lamine Yamal' />
+          </div>
+
+        </div>
       </div>
-      
 
       <h2>What is theftblcrew</h2>
-      <p>@theftblcrew is a football-focused Instagram page that delivers entertaining, engaging content for fans around the world.</p>
+      <p>@theftblcrew is a football-focused <br />
+       Instagram page that delivers <br/>
+      entertaining, engaging content for fans <br/>
+      around the world.</p>
 
       <h2>What kind of content do we post?</h2>
       <p>We post a mix of entertaining football content—including reels, 
@@ -22,7 +36,6 @@ function About() {
       especially Gen Z and Millennials who love fast, fun, and creative content.</p>
 
       <h2>Our reach</h2>
-
       <p>We currently have over 77,000 followers on Instagram and growing steadily.</p>
       
       <h2>Our story</h2>
